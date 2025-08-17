@@ -67,4 +67,17 @@ y
         [else (+ 1 (len (cdr lst)))]))
 
 
+;; write a func to take a list and index x and returns
+;; the first element if x = 0
+;; the second element if x = 1
+;; the third element if x = 2
+;; otherwise return 'unknown
+
+(define (lst-cond lst x)
+  (cond [(= x 0) (car lst)]
+        [(= x 1) (car (cdr lst))]
+        [(= x 2) (car (cdr (cdr lst)))]
+        [else 'unknown]))
+
+
 
