@@ -29,3 +29,12 @@
       0
       (+ (car l) (sum2 (cdr l)))))
 
+(define (onlypos l)
+  (if (empty? l)
+      '()
+      (if (<= (car l) 0)
+          (onlypos (cdr l))
+          (cons (car l) (onlypos (cdr l))))))
+
+
+   
